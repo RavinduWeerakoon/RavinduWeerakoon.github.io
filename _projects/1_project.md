@@ -1,81 +1,81 @@
 ---
 layout: page
-title: project 1
-description: with background image
+title: Employee Attrition analysis
+description: A datascience project to analyse the reason fo high rate of employee resignations
 img: assets/img/12.jpg
 importance: 1
-category: work
+category: Machine Learning
 related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+**Project Overview:**
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+This project aimed to analyze employee attrition at an anonymous construction firm to provide valuable insights for the company's CEO. The goal was to help the CEO make strategic decisions to improve employee retention and overall organizational stability.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+**Data Integration and Preprocessing:**
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
+1.  **Data Integration:**
+
+    -   Employed advanced data integration techniques to consolidate multiple data frames.
+    -   Ensured seamless merging of disparate datasets for a comprehensive analysis.
+2.  **Imputation Techniques:**
+
+    -   Applied the K-Nearest Neighbors (KNN) imputer to handle missing values effectively.
+    -   Focused on critical columns such as "Date of Birth" and "Marital Status" to maintain data integrity.
+
+<div class="row justify-content-sm-center">
+  <div class="col-sm-6 mt-3 mt-md-0">
+    {% include figure.liquid path="assets\img\project1\net_salary.png" title="net salary distribution" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm-6 mt-3 mt-md-0">
+    {% include figure.liquid path="assets\img\project1\year_of_birth.png" title="birth year distribution" class="img-fluid rounded z-depth-1" %}
+  </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    KNN imptation for the two categories and the one which deals less damage to the distribution was taken
 </div>
-<div class="row">
+3.  **Data Processing:**
+
+    -   Utilized various data processing techniques to clean and prepare the dataset for modeling.
+    -   Ensured that the processed data was robust and suitable for accurate model training.
+
+**Model Training and Evaluation:**
+
+-   **Model Selection:**
+    -   Trained an XGBoost (XGB) model to predict employee attrition.
+    -   Evaluated the model's performance, achieving an impressive accuracy of 0.89.
+-   **Model Validation:**
+    -   Analyzed the confusion matrix to verify the effectiveness of data transformations and imputations.
+    -   Confirmed that the imputations significantly contributed to the model's predictive power.
+
+    <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets\img\project1\feature_importance.png" title="Feature Importance" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
     This image can also have a caption. It's like magic.
-</div>
+</div
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+**Key Insights and Recommendations:**
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+Through comprehensive analysis and evaluation of feature importances, the project provided actionable insights, leading to the following strategic recommendations:
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+1.  **Hiring Practices:**
 
-{% raw %}
+    -   Increase the proportion of permanent employees.
+    -   Reduce reliance on contract-based hires to enhance job security and loyalty.
+2.  **Compensation Strategies:**
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+    -   Increase employee salaries, particularly for those with critical job roles.
+    -   Recognize that employees with higher salaries are more likely to remain with the company.
+3.  **Incentive Programs:**
 
-{% endraw %}
+    -   Implement targeted incentive programs to retain employees in the "Labor" category.
+    -   Focus on providing benefits that directly address the needs of labor-intensive roles.
+
+**Technolgies Used**
+-   Google Colab
+-   Python
+
+All the code and the dataset associated with the project can be found on [here](https://github.com/RavinduWeerakoon/Employee-Attrition-Analysis)
